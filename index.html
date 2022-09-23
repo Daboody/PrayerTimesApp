@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prayer Times</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="hero"></div>
+        <div class="today-date">
+            <i class="fa-solid fa-calendar-days"></i>
+            <span class="hijri-date"></span>
+            <span>/</span>
+            <span class="normal-date"></span>
+        </div>
+        <div class="elements-box">
+            <div class="city-wrapper">
+                <span class="active" data-city="Muscat" data-country="OM">مسقط</span>
+                <span data-city="Riyadh" data-country="SA">الرياض</span>
+                <span data-city="Khartoum" data-country="SD">الخرطوم</span>
+                <span data-city="Cairo" data-country="EG">القاهرة</span>
+            </div>
+            <div class="prayer-time-container">
+                <div class="praye-time-parent fajr">
+                    <span>الفجر</span>
+                    <span class="time"></span>
+                </div>
+                <div class="praye-time-parent Sunrise">
+                    <span>الشروق</span>
+                    <span class="time"></span>
+                </div>
+                <div class="praye-time-parent dhuhr active">
+                    <span>الظهر</span>
+                    <span class="time"></span>
+                </div>
+                <div class="praye-time-parent asr">
+                    <span>العصر</span>
+                    <span class="time"></span>
+                </div>
+                <div class="praye-time-parent maghrib">
+                    <span>المغرب</span>
+                    <span class="time"></span>
+                </div>
+                <div class="praye-time-parent isha">
+                    <span>العشاء</span>
+                    <span class="time"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>

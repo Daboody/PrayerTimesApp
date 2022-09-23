@@ -1,0 +1,195 @@
+:root {
+    --mainColor :#AFAF7B;
+    --secondColor :#C0C087;
+    --thirdColor :#FFFFB3;
+    --mainTranstion: .5s;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container {
+    height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    background-color: #000;
+}
+.hero {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(../img/main.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    filter: blur(12px);
+}
+.elements-box {
+    width: 500px;
+    height: 400px;
+    padding : 20px;
+    margin-top: 50px;
+    border-radius: 4px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 0px 0px 60px 5px #000;
+}
+/* Mobile Screen */  
+@media (min-width: 320px) and (max-width: 480px){
+    .elements-box{
+        width: 100%;
+        height: 450px;
+        gap: 30px;
+    }
+}
+/* Tablets Screen */
+@media (min-width: 481px) and (max-width: 768px){
+    .elements-box{
+        width: 480px;
+        height: 400px;
+    }
+}
+.today-date {
+    display: flex;
+    flex-flow: row-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    top: 15px;
+    left: 25px;
+    font-weight: bold;
+    font-size: 23px;
+    color: #fff;
+}
+/* Mobile Screen */  
+@media (min-width: 320px) and (max-width: 480px){
+    .today-date{
+        top: 20px;
+    }
+}
+.city-wrapper {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    flex-flow: row;
+    gap: 20px;
+}
+/* Mobile Screen */  
+@media (min-width: 320px) and (max-width: 480px){
+    .city-wrapper{
+        margin-top: 60px;
+        gap: 10px;
+    }
+}
+.city-wrapper span {
+    padding: 7px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: var(--mainTranstion);
+    user-select: none;
+    cursor: pointer;
+    color: #000;
+    background-color: var(--secondColor);
+    box-shadow: 0px 0px 5px 1px #000;
+}
+.city-wrapper span.active,
+.city-wrapper span:hover{
+    background-color: var(--thirdColor);
+    box-shadow: 0px 0px 5px 0px var(--thirdColor);
+    transition: var(--mainTranstion);
+}
+
+.prayer-time-container {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    gap: 40px;
+}
+/* Mobile Screen */  
+@media (min-width: 320px) and (max-width: 480px){
+    .prayer-time-container{
+        flex-flow: row wrap;
+        gap: 60px 30px;
+    }
+}
+.prayer-time-container div {
+    width: 100px;
+    padding: 10px 15px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 5px;
+    cursor: default;
+    font-weight: bold;
+    border: 2px solid var(--thirdColor);
+    border-radius: 5px;
+    transition: var(--mainTranstion);
+    background-color: var(--thirdColor);
+    box-shadow: 0px 0px 10px 1px #000;
+}
+.prayer-time-container div:hover{
+    transition: var(--mainTranstion);
+    background-color: var(--secondColor);
+    box-shadow: 0px 0px 10px 2px var(--thirdColor);
+    color: #000;
+}
+/* Mobile Screen */  
+@media (min-width: 320px) and (max-width: 480px){
+    .prayer-time-container div{
+        width: 70px;
+    }
+}
+/* Tablets Screen */
+@media (min-width: 481px) and (max-width: 768px){
+    .prayer-time-container div {
+        width: 100px;
+    }
+}
+.prayer-time-container .active {
+    transform: scale(1.3);
+    font-weight: bold;
+    color: #000;
+    background-color: var(--secondColor);
+    box-shadow: 0px 0px 10px 2px var(--thirdColor);
+    position: relative;
+}
+.prayer-time-container .active:hover {
+    border: 2px solid var(--thirdColor);
+}
+.active::before {
+    content: "الصلاة التالية";
+    position: absolute;
+    right: 18px;
+    top: -20px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #fff;
+}
+/* Mobile Screen */  
+@media (min-width: 320px) and (max-width: 480px){
+    .active::before{
+        width: 100px;
+        right: 0px;
+        font-size: 12px;
+    }
+}
+/* Tablets Screen */
+@media (min-width: 481px) and (max-width: 768px){
+    .active::before{
+        font-size: 12px;
+        right: 22.5px;
+    }
+}
